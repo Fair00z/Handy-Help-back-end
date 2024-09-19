@@ -1,0 +1,23 @@
+{%load static%}
+<img class="profile rounded-circle" data-toggle="modal" data-target="#exampleModalLong" src="{% static 'images/e4851eb9-2013-4e02-b31e-aa3617d92aa7.jpeg'%}" alt="">
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Profile</h5>
+      </div>
+      <div class="modal-body d-flex">
+        <img src="{% static 'images/e4851eb9-2013-4e02-b31e-aa3617d92aa7.jpeg'%}" class="profile-pop rounded-circle" alt="">
+        <div class="ms-5 mt-3">
+          <p>"Hi! To access all features of the app, please log in or sign up as a user or client. Enjoy the full experience!"</p>
+          <button type="button" class="btn btn-primary">Log In</button>
+          <button type="button" class="btn btn-primary">Sign Up</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* -------color-codes---------- */
+/* #30220E dark yellow theme */
+/* #FFA724 second dark yellow theme */
+/* #FCD397 third dark yellow theme */
+/* #F9F9F9 forth white theme */
+.logo{
+  width: 9rem;
+}
+.login-button{
+  background-color: #FFA724;
+  width: 80px;
+  border-radius: 5px;
+}
+.nav-link{
+  position: relative;
+}
+.nav-link::after{
+  content: "";
+  background-color: #FFA724;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 2px;
+  top: 50px;
+  transition: width 0.3s;
+}
+.profile{
+  width: 45px;
+  height: 45px;
+}
+.profile-pop{
+  width: 145px;
+  height: 145px;
+}
+.nav-link.active::after{
+  width: 90%;
+}
+.nav-link:hover::after{
+  width: 90%;
+}
+.first-column{
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+@media (max-width:992px){
+  .nav-link::after{
+      display: none;
+  }
+
+}
+@media (max-width:992px){
+  .sec-column{
+      display: none;
+  }
+  .first-column{
+      background-image: url(images/are\ you\ prepaired-opacited.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  .text-align{
+      text-align: center;
+      padding: 10px;
+  }
+}
+@media (max-width:768px),(max-width:576px){
+  .sec-column{
+      display: none;
+  }
+  .first-column{
+      background-image: url(images/are\ you\ prepaired-opacited.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  .text-align{
+      text-align: center;
+      padding: 10px;
+  }
+}
+.get-start-btn{
+  /* width: 80px; */
+  /* height: 40px; */
+  background-color: #FFA724;
+  color: #fff;
+  border-radius: 7px;
+  border: none;
+  padding: 10px 20px 10px 20px;
+}
