@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* .contents{
+    margin-top: 500px;
+} */
+ button{
+    width: 40%;
+ }
+ input{
+    width: 70%;
+    height: 70px;
+    border-radius: 7px;
+    border: 1px solid black;
+    padding-left: 20px;
+    margin-top: 10px;
+    outline: none;
+ }
+ .bg-theme-3{
+    background-color: #FCD397;
+ }
+.HandyHelp-logo{
+    width: 90%;
+}
+.btns{
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+}
+.btn-Client{
+    background-color: #FFA724;
+    width: 80%;
+    height: 75px;
+    margin-bottom: 15px;
+}
+.btn-Worker{
+    background-color: #FF3366;
+    width: 80%;
+    height: 75px;
+
+}
+.phone-logo{
+    width: 100%;
+    margin-bottom: 10px;
+    display: none;
+}
+@media (max-width:767px){
+    .HandyHelp-logo{
+        display: none;
+    }
+    .HandyHelp-Quete{
+        display: none;
+    }
+    .left-content-div{
+        display: none;
+    }
+    .phone-logo{
+        display: block;
+    }
+}

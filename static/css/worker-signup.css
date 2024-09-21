@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.worker-signup-back-box{
+    width: 100%;
+    background-color: #FCD397;
+    border-radius: 41px;
+}
+.input-div{
+    width: 100%;
+}
+.input-text{
+    width: 100%;
+    height: 45px;
+    border-radius: 7px;
+    border: 1px solid black;
+    padding-left: 20px;
+    margin-top: 10px;
+    outline: none;
+}
+.width{
+    width: 60%;
+}
+.w-65{
+    width: 67%;
+}
+.date-select{
+    width: 75px;
+    height: 45px;
+}
+.month-select{
+    width: 75px;
+    height: 45px;
+}
+.year-select{
+    width: 85px;
+    height: 45px;
+}
+.gender-select{
+    height: 45px;
+}
+.district-select{
+    height: 45px;
+}
+.md-px-5{
+    padding: 12%;
+}
+.btn-create-new-accout{
+    width: 100%;
+    height: 45px;
+    border-radius: 7px;
+    background-color: #FF3366;
+    border: none;
+    color: #fff;
+    margin-top: 20px;
+}
+.privacy-policy{
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+

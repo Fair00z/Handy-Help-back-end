@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/how-it-works.css' %}">
+    <script src="home-page.js"></script>
+    <script src="https://kit.fontawesome.com/47c73d8470.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="pt-3 pb-1 bg-dark ps-3">
+            <div class="container-fluid">
+                <p class="text-white work-text">The Way We Connect Clients and Workers:</p>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row mt-5 mb-5">
+                <div class="col-12">
+                    <div class="w-100 bg-white rounded">
+                        <img src="{% static 'images/Blank diagram.png' %}" alt="" class="w-100">
+                    </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <div class="w-100 bg-white rounded p-5">
+                        <h4>1. Client Posting a Job:</h4>
+                        <ul>
+                            <li>A client initiates the process by posting a job.</li>
+                            <li>The job post is then stored in the system's database.</li>
+                        </ul>
+
+                        <h4>2. Job Visibility to Workers:</h4>
+                        <ul>
+                            <li>The posted job becomes visible to workers who are registered on the platform.</li>
+                            <li>Workers can browse through the available jobs and search for ones that match their skills and preferences.</li>
+                        </ul>
+
+                        <h4>3. Worker Applying for a Job:</h4>
+                        <ul>
+                            <li>A worker interested in a job can apply for it.</li>
+                            <li>The application is recorded in the database.</li>
+                        </ul>
+
+                        <h4>4. Client Reviewing Applications:</h4>
+                        <ul>
+                            <li>The client can review the applications received for their job.</li>
+                            <li>They can assess the workers' profiles and choose the most suitable candidate.</li>
+                        </ul>
+
+                        <h4>5. Job Assignment to Worker:</h4>
+                        <ul>
+                            <li>Once a client selects a worker, the job is assigned to that worker.</li>
+                            <li>This information is updated in the database.</li>
+                        </ul>
+
+                        <h4>6. Worker Accessing Job Details:</h4>
+                        <ul>
+                            <li>The assigned worker gains access to the specific details of the job.</li>
+                            <li>This includes the job description, location, and any other relevant information.</li>
+                        </ul>
+
+                        <h4>7. Worker Completing the Job:</h4>
+                        <ul>
+                            <li>The worker completes the job as per the agreed terms.</li>
+                        </ul>
+
+                        <h4>8. Client Feedback and Payment:</h4>
+                        <ul>
+                            <li>The client provides feedback on the worker's performance.</li>
+                            <li>Payment is made to the worker for the completed job.</li>
+                        </ul>
+
+                        <h4>Key Components:</h4>
+                        <ul>
+                            <li><strong>Client:</strong> The person or entity seeking to hire a worker for a specific task.</li>
+                            <li><strong>Worker:</strong> The individual who performs the tasks requested by the client.</li>
+                            <li><strong>Job Post:</strong> The information about the job, including the task, location, and requirements.</li>
+                            <li><strong>Workers List:</strong> A list of available workers who can be hired for jobs.</li>
+                            <li><strong>Handy Help:</strong> The platform that facilitates the connection between clients and workers.</li>
+                            <li><strong>Client Dashboard:</strong> The interface where clients can post jobs, review applications, and manage their tasks.</li>
+                            <li><strong>Worker Dashboard:</strong> The interface where workers can view available jobs, apply for tasks, and manage their work.</li>
+                            <li><strong>Database:</strong> The system that stores information about jobs, workers, and their interactions.</li>
+                        </ul>
+
+                        <p>In essence, Handy Help provides a platform for clients and workers to efficiently connect and collaborate on various tasks, streamlining the process for both parties.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

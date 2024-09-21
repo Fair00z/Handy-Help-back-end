@@ -11,8 +11,8 @@
         <img src="{% static 'images/e4851eb9-2013-4e02-b31e-aa3617d92aa7.jpeg'%}" class="profile-pop rounded-circle" alt="">
         <div class="ms-5 mt-3">
           <p>"Hi! To access all features of the app, please log in or sign up as a user or client. Enjoy the full experience!"</p>
-          <button type="button" class="btn btn-primary">Log In</button>
-          <button type="button" class="btn btn-primary">Sign Up</button>
+          <a type="button" class="btn btn-primary" href="{% url 'login-page'%}">Log In</a>
+          <a type="button" class="btn btn-primary" href="{% url 'user-choice' %}" >Sign Up</a>
         </div>
       </div>
       <div class="modal-footer">
