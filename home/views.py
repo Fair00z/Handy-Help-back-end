@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate, login,logout
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def index(request):
@@ -19,10 +20,10 @@ def login_page(request):
     if user is not None:
       # Log the user in
       login(request, user)
-      return redirect('index')  # Redirect to a homepage or dashboard
+      return redirect('worker-home')  # Redirect to a homepage or dashboard
     else:
       # Add error if authentication fails
-      return redirect('user-choice')
+      return redirect('login-page')
   return render(request,'login-page.html')
 def user_choice(request):
   return render(request,'user-choice.html')
@@ -32,18 +33,27 @@ def worker_signup(request):
     password = request.POST.get('password')
     conformpassword = request.POST.get('conformpassword')
 
-    user = User.objects.create(
-        username=email,
-        email=email,
-        password=password
-    )
-    if user is not None:
-      login(request, user)
-      return redirect('index')
+    if User.objects.filter(username=email).exists():
+            return render(request, 'worker-signup.html', {'error': 'Email already exists'})
     else:
-      return redirect('worker-home.html')
-    
+      if password == conformpassword:
+        user = User.objects.create_user(
+            username=email,
+            email=email,
+            password=password
+        )
+        if user is not None:
+          login(request, user)
+          return redirect('worker-home')
+        else:
+          return redirect('worker-home.html')
+      else:
+        return render(request,'worker-signup.html',{'pass_error': 'Password did not match'})
   return render(request,'worker-signup.html')
 def logout_view(request):
   logout(request)
   return redirect('login-page')
+
+@login_required(login_url='/login/')
+def worker_home(request):
+  return render(request,'worker-home.html')

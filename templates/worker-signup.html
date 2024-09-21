@@ -30,9 +30,18 @@
                                 
                                     <input placeholder="Name" name='name' type="text" class="input-text">
                                     <input placeholder="Phone" type="number" name='phone' class="input-text">
+                                    {% if error %}
+                                    <input style="color: red;" placeholder="{{error}}" type="email" name='email' class="input-text">
+                                    {% else %}
                                     <input placeholder="Email" type="email" name='email' class="input-text">
+                                    {% endif  %}
+                                    
                                     <input placeholder="Password" type="password" name='password' class="input-text">
+                                    {% if pass_error%}
+                                    <input placeholder="{{pass_error}}" style="color: red;" type="password" name='conformpassword' class="input-text">
+                                    {% else %}
                                     <input placeholder="Conform Password" type="password" name='conformpassword' class="input-text">
+                                    {% endif %}
                                     <div class="mt-2">
                                         <div class="d-flex mb-2 justify-content-around width">
                                             <select class="date-select form-select-sm" aria-label=".form-select-sm ">
