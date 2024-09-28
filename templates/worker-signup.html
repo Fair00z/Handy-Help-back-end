@@ -44,40 +44,34 @@
                                     {% endif %}
                                     <div class="mt-2">
                                         <div class="d-flex mb-2 justify-content-around width">
-                                            <select class="date-select form-select-sm" aria-label=".form-select-sm ">
+                                            <select name="date" class="date-select form-select-sm" aria-label=".form-select-sm ">
                                                 <option selected disabled>Date</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
+                                                {% for date in dates %}
+                                                <option value="{{date}}">{{date}}</option>
+                                                {% endfor %}
                                             </select>
-                                              <select class="month-select form-select-sm" aria-label=".form-select-sm ">
+                                              <select name="month" class="month-select form-select-sm" aria-label=".form-select-sm ">
                                                 <option selected disabled>Month</option>
-                                                <option value="january">January</option>
-                                                  <option value="february">February</option>
-                                                  <option value="march">March</option>
-                                                  <option value="april">April</option>
-                                                  <option value="may">May</option>
-                                                  <option value="june">June</option>
-                                                  <option value="july">July</option>
-                                                  <option value="august">August</option>
-                                                  <option value="september">September</option>
-                                                  <option value="october">October</option>
-                                                  <option value="november">November</option>
+                                                {% for month in months %}
+                                                <option value="{{month}}">{{month}}</option>
+                                                {% endfor %}
                                               </select>
-                                              <select class="year-select form-select-sm" aria-label=".form-select-sm ">
+                                              <select name="year" name class="year-select form-select-sm" aria-label=".form-select-sm ">
                                                 <option selected disabled>Year</option>
-                                                <option value="1950">1950</option>
-                                                <option value="1951">1951</option>
+                                                {% for year in years %}
+                                                <option value="{{year}}">{{year}}</option>
+                                                {% endfor %}
                                           
                                               </select>
                                         </div>
                                         <div class="d-flex justify-content-around w-65">
-                                            <select class="gender-select form-select-sm" aria-label=".form-select-sm ">
+                                            <select name='gender'  class="gender-select form-select-sm" aria-label=".form-select-sm ">
                                                 <option disabled selected>Gender</option>
                                                 <option value="1">Male</option>
                                                 <option value="2">Female</option>
                                                 <option value="3">Prefer Not say</option>
                                               </select>
-                                              <select class="district-select form-select-sm" aria-label=".form-select-sm ">
+                                              <select  name='district' class="district-select form-select-sm" aria-label=".form-select-sm ">
                                                 <option disabled selected>District</option>
                                                 <option value="alappuzha">Alappuzha</option>
                                                 <option value="ernakulam">Ernakulam</option>
@@ -102,8 +96,8 @@
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="input-div">
-                                <input placeholder="Skill" type="text" class="input-text">
-                                <input placeholder="Experience" type="text" class="input-text">
+                                <input placeholder="Skill" type="text" class="input-text" name='skill'>
+                                <input placeholder="Experience" type="text" class="input-text" name='experience'>
                                 <button type="submit" class="btn-create-new-accout">Create New Account.</button>
                                 <div>
                                     <p class="privacy-policy"><span style="color: #FF3366;">HandyHelp.</span> we respects your <span style="color: #0085FF;">privacy</span> and is committed to protecting your personal information. This <span style="color: #0085FF;">Privacy Policy</span> outlines how we collect, use, disclose, and protect your information when you use our app.</p>

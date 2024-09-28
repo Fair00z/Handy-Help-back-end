@@ -136,3 +136,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
+
+# Set session cookie age (in seconds). Example: 1 week (7 days).
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 7  # 1 week
+
+# Make sure the session is saved even if the user closes the browser
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+

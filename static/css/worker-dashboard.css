@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background-color: rgb(215, 232, 248); */
+    background-color: #f2edf3;
+    filter: drop-shadow(0px 0px 8px rgb(173, 172, 172));
+
+}
+.btn-purple{
+    background-color: #a05aff;
+}
+.dashboard-profile{
+    width: 200px;
+    height: 200px;
+}
+.bg-theme-3-1{
+    background-color: white;
+}
+.bg-theme-1{
+    background-color: #FFA724;
+}
+.edit-btn{
+    width: 76px;
+    height: 35px;
+    border: none;
+    border-radius: 7px;
+}
+.bg-theme-3{
+    /* background-color: #fdf1dd; */
+    background-color: #dddddd;
+    /* background-color: white; */
+    /* background-color: #fea004; */
+    /* background-color: #5ae0d7; */
+    /* background-color: #73baf3; */
+}
+.status-head{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.status-work{
+    max-width: 150px;
+}
+.status-content{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.status-profile{
+    width: 54px;
+    height: 54px;
+}
+.profile-details{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.profile-rating{
+    color: #FFD700;
+    font-size: 1.5rem;
+}
+.status-box{
+    height: 370px;
+    overflow-y: scroll;
+}
+.review-profile{
+    width: 43px;
+    height: 43px;
+}
+.style-dot{
+    width: 15px;
+    height: 15px;
+}
+.font-weight-bold{
+    font-weight: 700;
+}
+.bg-aliceblue{
+    background-color: aliceblue;
+}
+.review-name{
+    font-weight: 500;
+    margin-top: 10px;
+}
