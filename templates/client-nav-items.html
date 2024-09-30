@@ -3,12 +3,12 @@
     <a class="nav-link text-dark active" aria-current="page" href="#">Home</a>
   </li>
   <li class="nav-item">
-      <a class="nav-link text-dark" aria-current="page" href="#">Job Post</a>
+      <a class="nav-link text-dark" aria-current="page" href="{% url 'job-post'%}">Job Post</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link text-dark" aria-current="page" href="#">Workers</a>
+      <a class="nav-link text-dark" aria-current="page" href="{% url 'list-worker'%}">Workers</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link text-dark" aria-current="page" href="#"><i class="fa-solid fa-gear me-1"></i>Dashboard</a>
+      <a class="nav-link text-dark" aria-current="page" href="{% url 'client-dashboard' %}"><i class="fa-solid fa-gear me-1"></i>Dashboard</a>
     </li>
 </ul>

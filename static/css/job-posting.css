@@ -1,0 +1,46 @@
+.job-post-heading-title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h6{
+    font-family: 'Times New Roman', Times, serif;
+    font-style:italic;
+    font-weight: 400;
+}
+input{
+    width: 80%;
+    height: 65px;
+    font-style: italic;
+    padding-left: 30px;
+}
+input:focus{
+    border-color: #17334d;
+    border-style: solid;
+  }
+/* .login-page-1-form{
+    margin-left: 25px;
+} */
+.login-page-2{
+    margin-top: 71px;
+}
+.login-page-2-descrip{
+    height: 205px;
+}
+.dec-text{
+    margin-top: 2%;
+}
+.footer-text{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+/* @media only screen and (max-width: 995px) {
+    div.login-page-1{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    div.login-page-1-form{
+        margin-left: 0px;
+    }
+  } */

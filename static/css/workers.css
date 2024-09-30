@@ -1,0 +1,13 @@
+.job-post-heading-title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(224, 224, 224) !important;
+    filter: drop-shadow(0px 0px 8px rgb(170, 170, 170));
+}

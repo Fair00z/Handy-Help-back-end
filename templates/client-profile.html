@@ -1,24 +1,26 @@
 {% load static %}
-<img class="profile rounded-circle" data-toggle="modal" data-target="#exampleModalLong" src="{% static 'images/profile.jpeg'%}" alt="">
+{%if user_details %}
+<img class="profile rounded-circle" data-toggle="modal" data-target="#exampleModalLong" src="{{user_details.profile_img.url}}" alt="">
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">@fayruow._</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">@{{user_details.name}}</h5>
       </div>
       <div class="modal-body d-flex">
-        <img src="{% static 'images/profile.jpeg' %}" class="profile-pop rounded-circle" alt="">
+        <img src="{{user_details.profile_img.url}}" class="profile-pop rounded-circle" alt="">
         <div class="ms-5 mt-3">
-          <p>Name : Fairooz</p>
-          <p>Address : Pookattil</p>
+          <p>Name : {{user_details.name}}</p>
+          <p>Address : {{user_details.district}}</p>
           <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
-        <button type="button" class="btn btn-danger">Log Out</button>
-      </div>
+        <button onclick="window.location.href='{% url 'logout' %}'" type="button" class="btn btn-danger">Log Out</button>
+      </div> 
     </div>
   </div>
 </div>
+{%endif%}

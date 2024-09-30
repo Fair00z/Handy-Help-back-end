@@ -26,7 +26,7 @@
                 <div class="d-flex flex-column justify-content-center" style="height: 100vh;">
                 <img class="phone-logo" src="./images/HandyHelp-logo.png">
                     <div class="bg-theme-3 h-50 rounded-4 d-flex flex-column justify-content-center align-items-center">
-                        <button class="btn-Client btns rounded-2">Register as a Client</button>
+                        <button onclick="window.location.href='{% url 'client-signup' %}'" class="btn-Client btns rounded-2">Register as a Client</button>
                         <button onclick="window.location.href='{% url 'worker-signup' %}'" class="btn-Worker btns rounded-2">Resgister as a Worker</button>
                     </div>
                 </div>
