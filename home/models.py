@@ -62,3 +62,16 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"{self.worker.user.user_data.name}'s review" # type: ignore
+class Job_post(models.Model):
+    work_name = models.CharField(max_length=300)
+    phone = models.CharField(max_length=10)
+    address = models.CharField(max_length=300)
+    work_location = models.CharField(max_length=300)
+    description = models.TextField()
+    client = models.ForeignKey(Client,on_delete=models.CASCADE)
+    work_img = models.ImageField(upload_to='job_image/',null=True)
+    thumbnail = models.ImageField(upload_to='job_image/thumbnail',null=True)
+
+    def __str__(self):
+        return self.work_name
+    

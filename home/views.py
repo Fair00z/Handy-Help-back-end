@@ -4,7 +4,11 @@ from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate, login,logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from . models import Worker_Detail,Worker_Dashboard,Worker,Client,Comment,Client_Detail,Client_Dashboard
+from . models import Worker_Detail,Worker_Dashboard,Worker,Client,Comment,Client_Detail,Client_Dashboard,Job_post
+from PIL import Image, ImageOps
+from io import BytesIO
+from django.core.files.base import ContentFile
+
 # Create your views here.
 
 def index(request):
@@ -124,8 +128,22 @@ def worker_dashboard(request):
   detail = Worker_Detail.objects.get(user=user)
   worker = Worker.objects.get(user=user)
   comments = Comment.objects.filter(worker=worker)
+
+  if request.POST:
+    edit_name = request.POST.get('name')
+    edit_skill = request.POST.get('skill')
+    edit_district = request.POST.get('district')
+    edit_profile = request.FILES.get('profile-img')
+
+    detail.name = edit_name
+    detail.skill = edit_skill
+    detail.district = edit_district
+    if edit_profile:
+      detail.profile_img = edit_profile
+    detail.save()
+    return redirect('worker-dashboard')
   context = {
-    'username':dashboard.title,
+    'username':user.username,
     'user_details':detail,
     'comments':comments,
   }
@@ -199,6 +217,42 @@ def client_signup(request):
 def job_posting(request):
   user = request.user
   if hasattr(user,'client'):
+    if request.POST:
+      work_img = request.FILES.get('work-img')
+      work_name = request.POST.get('work-name')
+      phone = request.POST.get('phone')
+      address = request.POST.get('address')
+      work_location = request.POST.get('work-location')
+      description = request.POST.get('description')
+      client = Client.objects.get(user=user)
+
+      def resize_image(image_path,size=(150, 150)):
+    # Open the uploaded image
+        with Image.open(image_path) as img:
+            # Maintain aspect ratio by using thumbnail method
+            img.thumbnail(size, Image.Resampling.LANCZOS)
+            
+            # Create a new image with the desired size and a white background
+            new_img = ImageOps.pad(img, size, method=Image.Resampling.LANCZOS, color=(255, 255, 255))
+            # Save the resized image
+            buffer = BytesIO()
+            new_img.save(buffer, format='JPEG',quality=100) 
+            image_file_name = image_path.name
+            return ContentFile(buffer.getvalue(), name=image_file_name)
+
+      img = resize_image(work_img)
+
+      Job_post.objects.create(
+        work_name = work_name,
+        phone = phone,
+        address = address,
+        work_location = work_location,
+        description =description,
+        client = client,
+        work_img = work_img,
+        thumbnail = img
+      )
+      return redirect('index') 
     return render(request,'job-posting.html')
   else:
     return redirect('index')
@@ -213,3 +267,14 @@ def list_workers(request):
     return  render(request,'workers.html',context)
   else:
     return redirect('index')
+  
+def find_jobs(request):
+  user = request.user
+  if hasattr(user,'worker'):
+    jobs = Job_post.objects.all()
+    context = {
+      'jobs':jobs
+    }
+    return  render(request,'find-jobs.html',context)
+  else:
+    return  redirect('index')

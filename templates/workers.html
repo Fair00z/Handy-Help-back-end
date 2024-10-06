@@ -27,7 +27,7 @@
                 <div class="w-100 d-flex justify-content-center">
                     <div class="card" style="width: 18rem;">
                         <div class="p-2">
-                            <img src="{% static 'images/profile.jpeg'%}" class="card-img-top rounded-circle border border-secondary-subtle" alt="...">
+                            <img src="{{worker.user.user_data.profile_img.url}}" class="card-img-top rounded-circle border border-secondary-subtle" alt="...">
                         </div>
                         <div class="card-body">
                             <span class="profile-rating text-warning"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>

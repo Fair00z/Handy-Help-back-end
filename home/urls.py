@@ -17,4 +17,5 @@ urlpatterns = [
      path('client-signup/', views.client_signup, name='client-signup'),
      path('job-post/', views.job_posting, name='job-post'),
      path('list-worker/', views.list_workers, name='list-worker'),
+     path('find-jobs', views.find_jobs, name='find-jobs'),
 ]
